@@ -11,6 +11,8 @@ ZSH_THEME="example"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bi="brew info"
+alias bs="brew search"
+alias love="/Applications/love.app/Contents/MacOS/love"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -38,33 +40,16 @@ alias bi="brew info"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
-# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
-# yyyy-mm-dd
-# HIST_STAMPS="mm/dd/yyyy"
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew perl knife knife_ssh)
+plugins=(git brew perl cpanm cp herkoku postgres python rsync ruby screen sublime sudo tmux colorize colored-man knife knife_ssh)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# Customize to your needs...
+export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/go/1.2.1/libexec/bin
+export LC_CTYPE=C 
+export LANG=C
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
